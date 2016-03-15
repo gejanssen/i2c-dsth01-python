@@ -6,7 +6,7 @@ Hoe de DSTH01 humdity sensor te gebruiken in de raspberry pi met Python.
 
 Even downloaden
 
-	gej@rpib3:~ $ git clone https://github.com/gejanssen/i2c-dsth01-python.git
+	gej@rpib3:~ $ **git clone https://github.com/gejanssen/i2c-dsth01-python.git**
 	Cloning into 'i2c-dsth01-python'...
 	remote: Counting objects: 14, done.
 	remote: Compressing objects: 100% (11/11), done.
@@ -19,7 +19,7 @@ Even downloaden
 
 Installatie I2c tools.
 
-	gej@rpib3:~/i2c-dsth01-python $ sudo apt-get install i2c-tools
+	gej@rpib3:~/i2c-dsth01-python $ **sudo apt-get install i2c-tools**
 	Reading package lists... Done
 	Building dependency tree       
 
@@ -28,7 +28,7 @@ Installatie I2c tools.
 
 Op welk I2C adres zit de DSTH01?
 
-	gej@rpib3:~/i2c-dsth01-python $ i2cdetect -y 1
+	gej@rpib3:~/i2c-dsth01-python $ **i2cdetect -y 1**
 	Error: Could not open file `/dev/i2c-1': Permission denied
 	Run as root?
 	gej@rpib3:~/i2c-dsth01-python $ sudo i2cdetect -y 1
@@ -47,14 +47,14 @@ Ah, adres 40.
 
 ### Wat is de luchtvochtigheid?
 
-	gej@rpi-a:~/i2c-dsth01-python $ sudo python DSTH0.py
+	gej@rpi-a:~/i2c-dsth01-python $ **sudo python DSTH0.py**
 	Temperature:  23.4375 C
 	Humidity:  34.8125 %
 	gej@rpi-a:~/i2c-dsth01-python $
 
 ## Compile the C code
 
-	gej@rpi-a:~/i2c-dsth01-python $ gcc si7005_rpi.c -o si7005_rpi
+	gej@rpi-a:~/i2c-dsth01-python $ **gcc si7005_rpi.c -o si7005_rpi**
 	gej@rpi-a:~/i2c-dsth01-python $ ls -l
 	total 32
 	drwxr-xr-x 2 gej gej 4096 Mar 15 11:20 Datasheet
@@ -67,13 +67,13 @@ Ah, adres 40.
 
 En de code uitvoeren
 
-	gej@rpi-a:~/i2c-dsth01-python $ ./si7005_rpi
+	gej@rpi-a:~/i2c-dsth01-python $ **./si7005_rpi**
 	can't open i2c : /dev/i2c-1
 	gej@rpi-a:~/i2c-dsth01-python $
 
 Oh oh, root rechten nodig....
 
-	gej@rpi-a:~/i2c-dsth01-python $ sudo ./si7005_rpi
+	gej@rpi-a:~/i2c-dsth01-python $ **sudo ./si7005_rpi**
 	Start read temp
 	Temperature Result : 23.47 C
 	Start read humi
