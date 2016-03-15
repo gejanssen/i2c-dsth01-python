@@ -2,7 +2,9 @@
 
 Hoe de DSTH01 humdity sensor te gebruiken in de raspberry pi met Python.
 
-## Download
+### Download
+
+Even downloaden
 
 	gej@rpib3:~ $ git clone https://github.com/gejanssen/i2c-dsth01-python.git
 	Cloning into 'i2c-dsth01-python'...
@@ -13,14 +15,18 @@ Hoe de DSTH01 humdity sensor te gebruiken in de raspberry pi met Python.
 	Checking connectivity... done.
 	gej@rpib3:~ $ 
 
-## Install i2c tools
+### Install i2c tools
+
+Installatie I2c tools.
 
 	gej@rpib3:~/i2c-dsth01-python $ sudo apt-get install i2c-tools
 	Reading package lists... Done
 	Building dependency tree       
 
 
-## Welk i2c adres te gebruiken
+### Welk i2c adres te gebruiken
+
+Op welk I2C adres zit de DSTH01?
 
 	gej@rpib3:~/i2c-dsth01-python $ i2cdetect -y 1
 	Error: Could not open file `/dev/i2c-1': Permission denied
@@ -39,7 +45,7 @@ Hoe de DSTH01 humdity sensor te gebruiken in de raspberry pi met Python.
 
 Ah, adres 40.
 
-## Wat is de luchtvochtigheid?
+### Wat is de luchtvochtigheid?
 
 	gej@rpib3:~/i2c-dsth01-python $ sudo python DSTH0.py 
 
