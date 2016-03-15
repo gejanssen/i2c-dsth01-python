@@ -1,6 +1,6 @@
 # De i2c humidity sensor DSTH01
 
-Hoe de DSTH01 humdity sensor te gebruiken in de raspberry pi met Python.
+Hoe de **DSTH01** humdity sensor te gebruiken in de raspberry pi met Python.
 
 ### Download
 
