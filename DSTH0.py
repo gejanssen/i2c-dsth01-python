@@ -30,11 +30,11 @@ if __name__ == '__main__':
             bus.write_byte_data(DSTH01_I2CADDR, 0x03, 0x01)
             time.sleep(0.1)
            
-            status = bus.read_i2c_block_data(DSTH01_I2CADDR, 0x00, 1)
-            time.sleep(0.1)
-            while status[0] != 0:
+            while True:
                 status = bus.read_i2c_block_data(DSTH01_I2CADDR, 0x00, 1)
                 print status
+                if status[0] == 0:
+                    break
                 time.sleep(0.1)
        
             status = bus.read_i2c_block_data(DSTH01_I2CADDR, 0x00, 4)
