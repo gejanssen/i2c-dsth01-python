@@ -29,6 +29,12 @@ Installatie I2c tools.
 	Reading package lists... Done
 	Building dependency tree       
 
+En Natuurlijk ook smbus
+
+```
+	$ sudo apt-get install python-smbus
+```
+
 ### Welk i2c adres te gebruiken
 
 Op welk I2C adres zit de DSTH01?
